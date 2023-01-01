@@ -1,0 +1,16 @@
+@baseUrl = http://localhost:8000
+
+###
+
+POST {{baseUrl}}/process_transaction
+content-type: application/json
+Authorization: Bearer dhdgk
+
+{
+  "pinBlock": "2f123c1e-1510-4163-bc8e-f79edb25c138",
+  "transactionDetails": {
+    "vendor": "Starbucks",
+    "amount": 6.79,
+    "timestamp": "2023-01-01T19:57:11.974099+00:00"
+  }
+}
