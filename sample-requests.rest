@@ -11,6 +11,6 @@ Authorization: Bearer dhdgk
   "transactionDetails": {
     "vendor": "Starbucks",
     "amount": 6.79,
-    "timestamp": "2023-01-01T19:57:11.974099+00:00"
+    "timestamp": "2023-01-01T12:00:00.000000+00:00"
   }
 }
