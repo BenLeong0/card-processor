@@ -1,0 +1,10 @@
+---
+version: "3.8"
+
+services:
+  mastercard-service:
+    build: ./mastercard-service
+    ports:
+      - 8000:8000
+    environment:
+      PORT: 8000
