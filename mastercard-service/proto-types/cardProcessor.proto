@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package cardProcessor;
+
+service MasterCardService {}
+
+service TokenisationService {
+  rpc TokenisePinBlock(TokenisationRequest) returns (TokenisationResponse) {};
+}
+
+service CryptoValidatorService {}
+
+service HSMService {}
+
+message TransactionRequest {
+  string pinBlock = 1;
+
+  message TransactionDetails {
+    string vendor = 1;
+    float amount = 2;
+    string timestamp = 3;
+  }
+  TransactionDetails transactionDetails = 2;
+}
+
+message TransactionResponse {
+  string message = 1;
+}
+
+message TokenisationRequest {
+  string pinBlock = 1;
+}
+
+message TokenisationResponse {
+  string tokenisedPinBlock = 1;
+}
