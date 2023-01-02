@@ -19,12 +19,9 @@ app.post("/process_transaction", (req, res) => {
   console.log(transactionRequest);
 
   let amount = transactionRequest.transactionDetails?.amount;
-  if (amount == null) {
-    res.send({ error: true, msg: "no amount sent" });
+  if (typeof amount !== "number") {
+    res.send({ error: true, msg: "incorrect format" });
     return;
-  }
-  if (typeof amount === "string") {
-    amount = parseFloat(amount);
   }
   res.send({ error: false, amountWithTax: amount * 1.2 });
 });
