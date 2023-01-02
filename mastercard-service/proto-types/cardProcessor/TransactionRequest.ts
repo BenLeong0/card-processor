@@ -1,4 +1,4 @@
-// Original file: proto/cardProcessor.proto
+// Original file: proto-types/cardProcessor.proto
 
 
 export interface _cardProcessor_TransactionRequest_TransactionDetails {

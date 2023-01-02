@@ -1,4 +1,4 @@
-// Original file: proto/cardProcessor.proto
+// Original file: proto-types/cardProcessor.proto
 
 import type * as grpc from '@grpc/grpc-js'
 import type { MethodDefinition } from '@grpc/proto-loader'
