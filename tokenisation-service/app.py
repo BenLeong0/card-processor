@@ -1,5 +1,6 @@
-from concurrent import futures
 import hashlib
+import os
+from concurrent import futures
 
 import grpc
 
@@ -20,12 +21,14 @@ class TokenisationService(cardProcessor_pb2_grpc.TokenisationService):
 
 
 def serve():
+    port = os.getenv("PORT", "50051")
+
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     cardProcessor_pb2_grpc.add_TokenisationServiceServicer_to_server(
         TokenisationService(),
         server
     )
-    server.add_insecure_port('[::]:50051')
+    server.add_insecure_port(f'[::]:{port}')
 
     print("starting server...")
     server.start()
