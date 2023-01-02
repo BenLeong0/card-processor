@@ -15,6 +15,8 @@ export interface ProtoGrpcType {
     CryptoValidatorService: SubtypeConstructor<typeof grpc.Client, _cardProcessor_CryptoValidatorServiceClient> & { service: _cardProcessor_CryptoValidatorServiceDefinition }
     HSMService: SubtypeConstructor<typeof grpc.Client, _cardProcessor_HSMServiceClient> & { service: _cardProcessor_HSMServiceDefinition }
     MasterCardService: SubtypeConstructor<typeof grpc.Client, _cardProcessor_MasterCardServiceClient> & { service: _cardProcessor_MasterCardServiceDefinition }
+    TokenisationRequest: MessageTypeDefinition
+    TokenisationResponse: MessageTypeDefinition
     TokenisationService: SubtypeConstructor<typeof grpc.Client, _cardProcessor_TokenisationServiceClient> & { service: _cardProcessor_TokenisationServiceDefinition }
     TransactionRequest: MessageTypeDefinition
     TransactionResponse: MessageTypeDefinition

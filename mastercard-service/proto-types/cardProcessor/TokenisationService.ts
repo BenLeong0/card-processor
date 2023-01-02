@@ -1,72 +1,27 @@
 // Original file: proto/cardProcessor.proto
 
-import type * as grpc from "@grpc/grpc-js";
-import type { MethodDefinition } from "@grpc/proto-loader";
-import type {
-  TransactionRequest as _cardProcessor_TransactionRequest,
-  TransactionRequest__Output as _cardProcessor_TransactionRequest__Output,
-} from "./TransactionRequest";
-import type {
-  TransactionResponse as _cardProcessor_TransactionResponse,
-  TransactionResponse__Output as _cardProcessor_TransactionResponse__Output,
-} from "./TransactionResponse";
+import type * as grpc from '@grpc/grpc-js'
+import type { MethodDefinition } from '@grpc/proto-loader'
+import type { TokenisationRequest as _cardProcessor_TokenisationRequest, TokenisationRequest__Output as _cardProcessor_TokenisationRequest__Output } from '../cardProcessor/TokenisationRequest';
+import type { TokenisationResponse as _cardProcessor_TokenisationResponse, TokenisationResponse__Output as _cardProcessor_TokenisationResponse__Output } from '../cardProcessor/TokenisationResponse';
 
 export interface TokenisationServiceClient extends grpc.Client {
-  ProcessTransaction(
-    argument: _cardProcessor_TransactionRequest,
-    metadata: grpc.Metadata,
-    options: grpc.CallOptions,
-    callback: grpc.requestCallback<_cardProcessor_TransactionResponse__Output>
-  ): grpc.ClientUnaryCall;
-  ProcessTransaction(
-    argument: _cardProcessor_TransactionRequest,
-    metadata: grpc.Metadata,
-    callback: grpc.requestCallback<_cardProcessor_TransactionResponse__Output>
-  ): grpc.ClientUnaryCall;
-  ProcessTransaction(
-    argument: _cardProcessor_TransactionRequest,
-    options: grpc.CallOptions,
-    callback: grpc.requestCallback<_cardProcessor_TransactionResponse__Output>
-  ): grpc.ClientUnaryCall;
-  ProcessTransaction(
-    argument: _cardProcessor_TransactionRequest,
-    callback: grpc.requestCallback<_cardProcessor_TransactionResponse__Output>
-  ): grpc.ClientUnaryCall;
-  processTransaction(
-    argument: _cardProcessor_TransactionRequest,
-    metadata: grpc.Metadata,
-    options: grpc.CallOptions,
-    callback: grpc.requestCallback<_cardProcessor_TransactionResponse__Output>
-  ): grpc.ClientUnaryCall;
-  processTransaction(
-    argument: _cardProcessor_TransactionRequest,
-    metadata: grpc.Metadata,
-    callback: grpc.requestCallback<_cardProcessor_TransactionResponse__Output>
-  ): grpc.ClientUnaryCall;
-  processTransaction(
-    argument: _cardProcessor_TransactionRequest,
-    options: grpc.CallOptions,
-    callback: grpc.requestCallback<_cardProcessor_TransactionResponse__Output>
-  ): grpc.ClientUnaryCall;
-  processTransaction(
-    argument: _cardProcessor_TransactionRequest,
-    callback: grpc.requestCallback<_cardProcessor_TransactionResponse__Output>
-  ): grpc.ClientUnaryCall;
+  TokenisePinBlock(argument: _cardProcessor_TokenisationRequest, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_cardProcessor_TokenisationResponse__Output>): grpc.ClientUnaryCall;
+  TokenisePinBlock(argument: _cardProcessor_TokenisationRequest, metadata: grpc.Metadata, callback: grpc.requestCallback<_cardProcessor_TokenisationResponse__Output>): grpc.ClientUnaryCall;
+  TokenisePinBlock(argument: _cardProcessor_TokenisationRequest, options: grpc.CallOptions, callback: grpc.requestCallback<_cardProcessor_TokenisationResponse__Output>): grpc.ClientUnaryCall;
+  TokenisePinBlock(argument: _cardProcessor_TokenisationRequest, callback: grpc.requestCallback<_cardProcessor_TokenisationResponse__Output>): grpc.ClientUnaryCall;
+  tokenisePinBlock(argument: _cardProcessor_TokenisationRequest, metadata: grpc.Metadata, options: grpc.CallOptions, callback: grpc.requestCallback<_cardProcessor_TokenisationResponse__Output>): grpc.ClientUnaryCall;
+  tokenisePinBlock(argument: _cardProcessor_TokenisationRequest, metadata: grpc.Metadata, callback: grpc.requestCallback<_cardProcessor_TokenisationResponse__Output>): grpc.ClientUnaryCall;
+  tokenisePinBlock(argument: _cardProcessor_TokenisationRequest, options: grpc.CallOptions, callback: grpc.requestCallback<_cardProcessor_TokenisationResponse__Output>): grpc.ClientUnaryCall;
+  tokenisePinBlock(argument: _cardProcessor_TokenisationRequest, callback: grpc.requestCallback<_cardProcessor_TokenisationResponse__Output>): grpc.ClientUnaryCall;
+  
 }
 
-export interface TokenisationServiceHandlers
-  extends grpc.UntypedServiceImplementation {
-  ProcessTransaction: grpc.handleUnaryCall<
-    _cardProcessor_TransactionRequest__Output,
-    _cardProcessor_TransactionResponse
-  >;
+export interface TokenisationServiceHandlers extends grpc.UntypedServiceImplementation {
+  TokenisePinBlock: grpc.handleUnaryCall<_cardProcessor_TokenisationRequest__Output, _cardProcessor_TokenisationResponse>;
+  
 }
 
 export interface TokenisationServiceDefinition extends grpc.ServiceDefinition {
-  ProcessTransaction: MethodDefinition<
-    _cardProcessor_TransactionRequest,
-    _cardProcessor_TransactionResponse,
-    _cardProcessor_TransactionRequest__Output,
-    _cardProcessor_TransactionResponse__Output
-  >;
+  TokenisePinBlock: MethodDefinition<_cardProcessor_TokenisationRequest, _cardProcessor_TokenisationResponse, _cardProcessor_TokenisationRequest__Output, _cardProcessor_TokenisationResponse__Output>
 }
