@@ -1,4 +1,4 @@
-// Original file: proto-types/cardProcessor.proto
+// Original file: proto-ts/cardProcessor.proto
 
 
 export interface TokenisationResponse {

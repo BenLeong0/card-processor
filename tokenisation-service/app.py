@@ -4,7 +4,7 @@ from concurrent import futures
 
 import grpc
 
-from proto_types import (
+from proto import (
     cardProcessor_pb2,
     cardProcessor_pb2_grpc,
 )
