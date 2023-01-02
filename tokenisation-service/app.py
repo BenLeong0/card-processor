@@ -17,7 +17,9 @@ def tokenise_pin_block(pin_block: str) -> str:
 class TokenisationService(cardProcessor_pb2_grpc.TokenisationService):
 
     def TokenisePinBlock(self, request: cardProcessor_pb2.TokenisationRequest, context):
-        return tokenise_pin_block(request.pinBlock)
+        print("tokenising pin block")
+        tokenised_pin_block = tokenise_pin_block(request.pinBlock)
+        return cardProcessor_pb2.TokenisationResponse(tokenisedPinBlock=tokenised_pin_block)
 
 
 def serve():

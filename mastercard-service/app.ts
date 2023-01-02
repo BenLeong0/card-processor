@@ -31,7 +31,7 @@ app.post("/process_transaction", (req, res) => {
   if (pinBlock == null) return res.send({ success: false, error_msg: "invalid" });
 
   const client = new grpcObj.cardProcessor.TokenisationService(
-    `0.0.0.0:50051`,
+    `localhost:50051`,
     grpc.credentials.createInsecure()
   );
   const deadline = new Date();
@@ -39,6 +39,7 @@ app.post("/process_transaction", (req, res) => {
   client.waitForReady(
     deadline,
     (err) => {
+      console.log("CONNECTED")
       if (err) return console.error(err);
       client.TokenisePinBlock(
         { pinBlock },
@@ -50,7 +51,6 @@ app.post("/process_transaction", (req, res) => {
       )
     }
   )
-
 });
 
 app.listen(PORT, () => {

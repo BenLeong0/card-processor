@@ -4,7 +4,6 @@
 
 POST {{baseUrl}}/process_transaction
 content-type: application/json
-Authorization: Bearer dhdgk
 
 {
   "pinBlock": "2f123c1e-1510-4163-bc8e-f79edb25c138",
@@ -14,3 +13,7 @@ Authorization: Bearer dhdgk
     "timestamp": "2023-01-01T12:00:00.000000+00:00"
   }
 }
+
+###
+
+GET {{baseUrl}}/ping
