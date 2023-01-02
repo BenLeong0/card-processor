@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from proto_types import cardProcessor_pb2 as proto_dot_cardProcessor__pb2
+from proto import cardProcessor_pb2 as proto_dot_cardProcessor__pb2
 
 
 class MasterCardServiceStub(object):
